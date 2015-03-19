@@ -8,9 +8,9 @@ use frontend\widgets\Alert;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
 AppAsset::register($this);
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -63,9 +63,9 @@ AppAsset::register($this);
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer">111111111111111111111111111111
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; My Company1111111111111111 <?= date('Y') ?></p>
         <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>

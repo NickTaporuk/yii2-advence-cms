@@ -11,6 +11,8 @@ use yii\filters\AccessControl;
  */
 class LandingController extends Controller
 {
+
+    public $layout = 'main11.php';//load layout to module
     /**
      * @inheritdoc
      */
