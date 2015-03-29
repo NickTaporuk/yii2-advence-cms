@@ -13,6 +13,7 @@ class DefaultController extends Controller
 //        ECHO Yii::$app->homeUrl;
 //        ECHO Url::base();
 //        EXIT;
+//        var_dump(Yii::getAlias('@frontend'));exit;
         $this->layout ='main11';
         return $this->render('index');
     }

@@ -26,7 +26,8 @@
         "yiisoft/yii2-gii": "*",
         "yiisoft/yii2-faker": "*",
         "yiisoft/yii2-twig": "~2.0.0",
-        "yiisoft/yii2-jui": "2.0.*@dev"
+        "yiisoft/yii2-jui": "2.0.*@dev",
+        "codeception/codeception": "2.1.*@dev"//test library
 
     },
     "config": {
