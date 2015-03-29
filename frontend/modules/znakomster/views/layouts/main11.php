@@ -22,11 +22,49 @@ AppAsset::register($this);
     <?php $this->head() ?>
     <?php $this->registerCssFile('/css/layout.css');?>//подгрузить css файл
 </head>
+<!-- first -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?= Yii::$app->language ?>">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+    <?php $this->registerCssFile('/css/layout.css');?>//подгрузить css файл
+    <meta charset="<?= Yii::$app->charset ?>"/>
+    <?= Html::csrfMetaTags() ?>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <title>Flirchi – discover new friends!</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://s.flirchicdn.com/loginpage-42a42d9b.css" type="text/css" media="screen, projection"/>    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.unshift(['_setAccount', 'UA-22534608-1']);
+        _gaq.push(['_setSiteSpeedSampleRate', 10]);_gaq.push(['_trackPageview', '/public']);    (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" media="all" type="text/css" href="/pretty/css/loginpage/ie.css"/>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="/js/loginpage/PIE.js"></script>
+    <![endif]-->
+</head>
+<!-- end -->
+
 <body>
     <?php $this->beginBody() ?>
-    <div class="wrap">
+<!--    <div class="wrap">
         <?php
-            NavBar::begin([
+/*            NavBar::begin([
                 'brandLabel' => 'My Company',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
@@ -53,23 +91,16 @@ AppAsset::register($this);
                 'items' => $menuItems,
             ]);
             NavBar::end();
-        ?>
+        */?>
 
         <div class="container">
-        <?= Breadcrumbs::widget([
+        <?/*= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
+        ]) */?>
+        --><?/*= Alert::widget() */?>
         <?= $content ?>
         </div>
     </div>
-
-    <footer class="footer">111111111111111111111111111111
-        <div class="container">
-        <p class="pull-left">&copy; My Company1111111111111111 <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
-    </footer>
 
     <?php $this->endBody() ?>
 </body>
