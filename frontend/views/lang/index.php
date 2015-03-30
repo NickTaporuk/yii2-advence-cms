@@ -8,14 +8,20 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 use frontend\widgets\Langs;
-
+use frontend\components\SecondWidget;
 
 $this->title = Yii::t('app', 'Langs');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<?php SecondWidget::begin()?>
+dshkjvgwejygvjweuvbwej
+<?php SecondWidget::end()?>
+<?//=var_dump(Yii::$app->response)?>
 <?= Langs::widget();?>
 
 <?=Yii::t('main','blog')?>
+
 <div class="lang-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

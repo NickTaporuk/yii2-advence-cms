@@ -8,7 +8,8 @@ use frontend\models\LangSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use frontend\models\EntryForm;
+use frontend\models\Country;
 /**
  * http://habrahabr.ru/post/226931/ -- lang init
  * LangController implements the CRUD actions for Lang model.
@@ -33,6 +34,7 @@ class LangController extends Controller
      */
     public function actionIndex()
     {
+        var_dump(Country::find()->orderBy('name')->all());
         $searchModel = new LangSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -117,6 +119,22 @@ class LangController extends Controller
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+    public function actionEntry()
+    {
+        $model = new EntryForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            // данные в $model удачно проверены
+
+            // делаем что-то полезное с $model ...
+
+            return $this->render('entry-confirm', ['model' => $model]);
+        } else {
+            // либо страница отображается первый раз, либо есть ошибка в данных
+            return $this->render('entry', ['model' => $model]);
         }
     }
 }
