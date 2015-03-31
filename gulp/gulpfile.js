@@ -1,7 +1,9 @@
-var gulp = require('gulp');
-var concatCss = require('gulp-concat-css'),
-    minifyCSS = require('gulp-minify-css'),
-    renameCss = require('gulp-rename');
+var gulp = require('gulp'),
+    concatCss       = require('gulp-concat-css'),
+    minifyCSS       = require('gulp-minify-css'),
+    notify          = require('gulp-notify'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    renameCss       = require('gulp-rename');
 
 gulp.task('default', function () {
     //путь к папке
@@ -9,7 +11,8 @@ gulp.task('default', function () {
         .pipe(concatCss("bundle.css"))
         .pipe(minifyCSS())
         .pipe(renameCss("bundle.min.css"))
-        .pipe(gulp.dest('../frontend/web/css/minify/'));
+        .pipe(gulp.dest('../frontend/web/css/minify/'))
+        .pipe(notify('Done!'));
 });
 
 gulp.task('watch',function(){
