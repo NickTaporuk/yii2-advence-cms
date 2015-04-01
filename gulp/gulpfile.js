@@ -10,6 +10,7 @@ gulp.task('default', function () {
     return gulp.src('/var/www/advanced/frontend/web/css/*.css')
         .pipe(concatCss("bundle.css"))
         .pipe(minifyCSS())
+        .pipe(autoprefixer('last 2 version','>1%','ie9'))
         .pipe(renameCss("bundle.min.css"))
         .pipe(gulp.dest('../frontend/web/css/minify/'))
         .pipe(notify('Done!'));
