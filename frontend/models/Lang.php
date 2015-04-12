@@ -96,11 +96,11 @@ class Lang extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'url' => Yii::t('app', 'Url'),
-            'local' => Yii::t('app', 'Local'),
-            'name' => Yii::t('app', 'Name'),
-            'default' => Yii::t('app', 'Default'),
+            'id'        => Yii::t('app', 'ID'),
+            'url'       => Yii::t('app', 'Url'),
+            'local'     => Yii::t('app', 'Local'),
+            'name'      => Yii::t('app', 'Name'),
+            'default'   => Yii::t('app', 'Default'),
             'date_update' => Yii::t('app', 'Date Update'),
             'date_create' => Yii::t('app', 'Date Create'),
         ];

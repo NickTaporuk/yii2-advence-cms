@@ -94,7 +94,7 @@ class RestController extends ActiveController {
 //        echo json_encode($params,JSON_PRETTY_PRINT);
         $str ='';
 //        echo json_encode($_SERVhttp_get_request_headersER['HTTP_AUTHENTICATION'],JSON_PRETTY_PRINT);
-        echo json_encode(http_get_request_headers(),JSON_PRETTY_PRINT);
+//        echo json_encode(http_get_request_headers(),JSON_PRETTY_PRINT);
 //        echo json_encode(Yii::$app->getRequest()->getMethod(),JSON_PRETTY_PRINT);
 
     }
